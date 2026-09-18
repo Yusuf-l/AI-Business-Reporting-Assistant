@@ -32,7 +32,7 @@ The application automatically validates and standardizes uploaded Excel files, c
 
 ## AI Capabilities
 
-The application uses Gemini to analyze verified business metrics generated from the uploaded dataset.
+The application uses Google's Gemini API to analyze verified business metrics generated from the uploaded dataset.
 
 The AI analysis is structured into:
 
@@ -41,7 +41,7 @@ The AI analysis is structured into:
 3. Possible Explanations
 4. Recommended Actions
 
-The AI is instructed to base its analysis strictly on the calculated business metrics and to distinguish potential explanations from verified facts.
+The AI is instructed to base its analysis strictly on calculated business metrics and to distinguish potential explanations from verified facts.
 
 ## Data Processing Pipeline
 
@@ -74,7 +74,7 @@ Excel Report Export
 * Pandas
 * OpenPyXL
 
-### Dashboard
+### Dashboard & Visualization
 
 * Streamlit
 * Plotly
@@ -98,11 +98,11 @@ AI-Business-Reporting-Assistant/
 ├── test_gemini.py
 ├── requirements.txt
 ├── README.md
+├── .env.example
+├── .gitignore
 │
-├── data/
-│   └── sales_data.xlsx
-│
-└── .gitignore
+└── data/
+    └── sales_data.xlsx
 ```
 
 ## Installation
@@ -110,7 +110,7 @@ AI-Business-Reporting-Assistant/
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/AI-Business-Reporting-Assistant.git
+git clone https://github.com/Yusuf-l/AI-Business-Reporting-Assistant.git
 ```
 
 Enter the project directory:
@@ -131,7 +131,7 @@ Activate the virtual environment on Windows:
 .venv\Scripts\activate
 ```
 
-Install dependencies:
+Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -139,6 +139,7 @@ pip install -r requirements.txt
 
 ## Gemini API Configuration
 
+<<<<<<< HEAD
 Create a `.env` file in the project root.
 
 You can use `.env.example` as a template.
@@ -149,12 +150,25 @@ On Windows:
 copy .env.example .env
 
 Then open the .env file and replace the placeholder with your own Gemini API key:
+=======
+The application requires a Gemini API key to use the AI analysis features.
+
+You can use `.env.example` as a template.
+
+On Windows, create your `.env` file by running:
+
+```bash
+copy .env.example .env
+```
+
+Then open the `.env` file and replace the placeholder with your own Gemini API key:
+>>>>>>> a5f4ddc (Improve project documentation)
 
 GEMINI_API_KEY=YOUR_API_KEY
 
 Do not commit your `.env` file to GitHub.
 
-The `.gitignore` file already excludes `.env` from version control.
+The `.gitignore` file excludes `.env` from version control.
 
 ## Running the Application
 
@@ -169,11 +183,11 @@ The application will open in your browser.
 ## Example Workflow
 
 1. Upload an Excel business dataset.
-2. The application automatically maps supported column names to the standard format.
+2. The application automatically maps supported column names to the standard dataset format.
 3. Data quality and validation checks are performed.
 4. Business KPIs and visualizations are generated.
 5. Gemini analyzes the verified business metrics.
-6. The user can download a structured Excel business report.
+6. The user can download a structured Excel business report containing the calculated analyses and AI-generated insights.
 
 ## Example Report Structure
 
@@ -189,6 +203,21 @@ Inventory Analysis
 AI Business Insights
 ```
 
+The report also includes automatically generated Excel charts for selected business analyses.
+
+## Data Validation
+
+The application performs several validation checks before generating business insights:
+
+* Missing required columns
+* Missing values
+* Invalid dates
+* Non-numeric values in numeric columns
+* Duplicate rows
+* Supported column-name variations
+
+This helps ensure that the AI analysis is based on validated business metrics rather than raw, unchecked input data.
+
 ## Future Improvements
 
 Possible future improvements include:
@@ -203,7 +232,7 @@ Possible future improvements include:
 
 ## Author
 
-Yusuf-l
+**Yusuf-l**
 
 Electrical & Electronics Engineering Student
 
