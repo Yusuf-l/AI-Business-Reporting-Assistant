@@ -139,11 +139,18 @@ pip install -r requirements.txt
 
 ## Gemini API Configuration
 
-Create a `.env` file in the project root:
+Create a `.env` file in the project root.
 
-```text
+You can use `.env.example` as a template.
+
+On Windows:
+
+```bash
+copy .env.example .env
+
+Then open the .env file and replace the placeholder with your own Gemini API key:
+
 GEMINI_API_KEY=YOUR_API_KEY
-```
 
 Do not commit your `.env` file to GitHub.
 
