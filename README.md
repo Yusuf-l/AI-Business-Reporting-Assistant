@@ -196,7 +196,7 @@ Possible future improvements include:
 
 ## Author
 
-Yusuf Öztürk
+Yusuf-l
 
 Electrical & Electronics Engineering Student
 
