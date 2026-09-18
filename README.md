@@ -30,6 +30,14 @@ The application automatically validates and standardizes uploaded Excel files, c
 * AI Business Insights sheet
 * Automatic Excel charts
 
+## Dashboard Preview
+
+![Dashboard Demo](screenshots/dashboard-demo.gif)
+
+## AI Business Insights
+
+![AI Business Insights](screenshots/ai-insights.png)
+
 ## AI Capabilities
 
 The application uses Google's Gemini API to analyze verified business metrics generated from the uploaded dataset.
